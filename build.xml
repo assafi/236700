@@ -3,6 +3,7 @@
    <target name="clean">
       <delete dir="bin" />
    </target>
+   <!-- -->
  
    <target name="init">
       <tstamp/>
