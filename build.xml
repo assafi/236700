@@ -1,0 +1,25 @@
+<project name="236700" basedir="." default="compile">
+ 
+   <target name="clean">
+      <delete dir="bin" />
+   </target>
+ 
+   <target name="init">
+      <tstamp/>
+   </target>
+ 
+   <target name="compile" depends="init">
+      <mkdir dir="bin"/>
+      <javac srcdir="src" destdir="bin">
+         <classpath>
+            <pathelement location="libs/junit-4.10.jar"/>
+         </classpath>
+      </javac>
+      <copy todir="bin">
+         <fileset dir="src">
+            <exclude name="**/*.java"/>
+         </fileset>
+      </copy>          
+    </target>
+ 
+</project>
